@@ -75,16 +75,10 @@ h2 {
 }
 
 .portfolio-title {
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    font-weight: 600;
+    font-family: "Times New Roman", serif;
+    font-style: italic !important;
     font-size: 4rem;
-    color: #3f4f44;
-
-    text-shadow:
-        3px 3px 6px rgba(0,0,0,0.18);
-
-    text-align: center;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
 }
 .gallery {
     display: grid;
