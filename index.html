@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aby Saji Photography</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">ABY SAJI</div>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="portraits.html">Portraits</a>
+    <a href="landscapes.html">Landscapes</a>
+    <a href="street.html">Street</a>
+    <a href="events.html">Events</a>
+    <a href="travel.html">Travel</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Capturing Stories Through Photography</h1>
+    <p>Portrait • Landscape • Street • Travel • Events</p>
+  </div>
+</section>
+
+<section class="portfolio">
+<h2>Gallery</h2>
+
+<div class="category-grid">
+<a href="portraits.html" class="card"><h3>Portraits</h3></a>
+<a href="landscapes.html" class="card"><h3>Landscapes</h3></a>
+<a href="street.html" class="card"><h3>Street Photography</h3></a>
+<a href="events.html" class="card"><h3>Event Photography</h3></a>
+<a href="travel.html" class="card"><h3>Travel Photography</h3></a>
+</div>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<p>Your photographer bio goes here.</p>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: your@email.com</p>
+</section>
+
+<script>
+function toggleMenu(){
+ document.getElementById('navMenu').classList.toggle('active');
+}
+</script>
+</body>
+</html>

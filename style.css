@@ -1,0 +1,18 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;line-height:1.6}
+header{position:fixed;top:0;width:100%;background:#fff;padding:20px 5%;
+display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.logo{font-weight:bold;letter-spacing:2px}
+nav a{text-decoration:none;color:#222;margin-left:20px}
+.hero{height:100vh;background:#222;color:white;display:flex;justify-content:center;align-items:center;text-align:center}
+.hero-content{background:rgba(0,0,0,.4);padding:30px;border-radius:10px}
+.portfolio,#about,#contact{padding:100px 8%}
+.category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{text-decoration:none;color:#222;background:#f4f4f4;padding:60px 20px;border-radius:12px;text-align:center}
+.hamburger{display:none;background:none;border:none;font-size:2rem;cursor:pointer}
+@media(max-width:768px){
+.hamburger{display:block}
+nav{display:none;position:absolute;top:80px;right:20px;background:white;padding:20px;border-radius:10px;flex-direction:column}
+nav.active{display:flex}
+nav a{margin:10px 0}
+}
