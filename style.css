@@ -74,6 +74,18 @@ h2 {
     font-size: 2rem;
 }
 
+.portfolio-title {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 4rem;
+    color: #3f4f44;
+
+    text-shadow:
+        3px 3px 6px rgba(0,0,0,0.18);
+
+    text-align: center;
+}
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
