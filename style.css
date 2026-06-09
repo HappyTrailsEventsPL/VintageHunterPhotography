@@ -10,6 +10,21 @@ nav a{text-decoration:none;color:#222;margin-left:20px}
 .category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
 .card{text-decoration:none;color:#222;background:#f4f4f4;padding:60px 20px;border-radius:12px;text-align:center}
 .hamburger{display:none;background:none;border:none;font-size:2rem;cursor:pointer}
+.gallery {
+    columns: 4 300px;
+    column-gap: 16px;
+}
+.gallery img {
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    display: block;
+    break-inside: avoid;
+    transition: 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.02);
+}
 @media(max-width:768px){
 .hamburger{display:block}
 nav{display:none;position:absolute;top:80px;right:20px;background:white;padding:20px;border-radius:10px;flex-direction:column}
