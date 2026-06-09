@@ -75,10 +75,26 @@ h2 {
 }
 
 .portfolio-title {
-    font-family: "Times New Roman", serif;
-    font-style: italic !important;
-    font-size: 4rem;
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+    font-family: "Palatino Linotype", Georgia, serif;
+    font-style: italic;
+    font-size: 4.5rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+
+    color: #4a5a52;
+
+    text-shadow:
+        3px 3px 6px rgba(0,0,0,0.15);
+
+    text-align: center;
+}
+.portfolio-title::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: #b7c9b2;
+    margin: 15px auto 0;
 }
 .gallery {
     display: grid;
