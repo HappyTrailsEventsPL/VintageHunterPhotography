@@ -124,18 +124,14 @@ hamburger.addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', closeMenu);
-document.getElementById('aboutLink').addEventListener('click', () => {
-    setTimeout(closeMenu, 50);
-});
-
-document.getElementById('contactLink').addEventListener('click', () => {
-    setTimeout(closeMenu, 50);
-});
 document.querySelectorAll('#navMenu a').forEach(link => {
 
     link.addEventListener('click', () => {
 
-        closeMenu();
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+
+        document.body.style.overflow = '';
 
     });
 
