@@ -17,8 +17,8 @@
   <button class="hamburger">☰</button>
 
   <nav id="navMenu">
-    <a href="#" data-target="about">About</a>
-    <a href="#" data-target="contact">Contact</a>
+    <a href="javascript:void(0)" data-target="about">About</a>
+    <button id="testBtn">TEST BUTTON</button>
     <a href="index.html">Home</a>
     <a href="portraits.html">Portraits</a>
     <a href="landscapes.html">Landscapes</a>
@@ -102,7 +102,9 @@
 </footer>
 <script>
 alert("script started");
-alert(document.querySelectorAll('[data-target]').length);  
+document.getElementById('testBtn').onclick = () => {
+    alert('button clicked');
+};
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('#navMenu');
 const overlay = document.querySelector('.overlay');
