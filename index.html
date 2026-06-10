@@ -23,8 +23,8 @@
     <a href="street.html">Street</a>
     <a href="events.html">Events</a>
     <a href="travel.html">Travel</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a id="aboutLink" href="#about">About</a>
+    <a id="contactLink" href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -99,10 +99,6 @@
     </div>
 </footer>
 <script>
-alert("script started");
-document.getElementById('testBtn').onclick = () => {
-    alert('button clicked');
-};
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('#navMenu');
 const overlay = document.querySelector('.overlay');
@@ -128,26 +124,22 @@ hamburger.addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', closeMenu);
+document.getElementById('aboutLink').addEventListener('click', () => {
+    setTimeout(closeMenu, 50);
+});
 
-document.querySelectorAll('.nav-link').forEach(btn => {
+document.getElementById('contactLink').addEventListener('click', () => {
+    setTimeout(closeMenu, 50);
+});
+document.querySelectorAll('#navMenu a').forEach(link => {
 
-    btn.addEventListener('click', function() {
-
-        const target = this.dataset.target;
+    link.addEventListener('click', () => {
 
         closeMenu();
-
-        setTimeout(() => {
-            document.getElementById(target)
-                .scrollIntoView({
-                    behavior: 'smooth'
-                });
-        }, 300);
 
     });
 
 });
-
 document.addEventListener('click', (e) => {
     if (
         nav.classList.contains('active') &&
@@ -156,9 +148,6 @@ document.addEventListener('click', (e) => {
     ) {
         closeMenu();
     }
-});
-document.querySelector('#navMenu').addEventListener('click', () => {
-    alert('NAV CLICKED');
 });
 </script>
 <div class="overlay"></div>
