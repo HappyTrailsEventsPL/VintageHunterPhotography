@@ -140,6 +140,14 @@ nav a{text-decoration:none;color:#222;margin-left:20px}
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+.hamburger{
+    display:none;
+    background:none;
+    border:none;
+    font-size:2rem;
+    cursor:pointer;
+    color:#222;
+}
 @media(max-width:768px){
     .hamburger{display:block;}
     nav{
