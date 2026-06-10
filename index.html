@@ -82,9 +82,12 @@
     <h2 class="portfolio-title">Contact</h2>
 
     <div class="contact-info">
-        <p><strong>Email</strong><br><a href="mailto:happytrailevents.pl@email.com">
-        happytrailevents.pl@email.com</p></a>
-
+  <p>
+    <strong>Email</strong><br>
+    <a href="mailto:happytrailevents.pl@email.com">
+        happytrailevents.pl@email.com
+    </a>
+  </p>
         <p><strong>Instagram</strong><br><a href="https://instagram.com/vintage__hunter" target="_blank">
     <i class="fab fa-instagram"></i> @vintage__hunter
 </a></p>
@@ -125,6 +128,23 @@ document.addEventListener('click', (e) => {
         closeMenu();
     }
 
+});
+  function closeMenu(){
+    nav.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', () => {
+
+    nav.classList.toggle('active');
+    overlay.classList.toggle('active');
+
+    if(nav.classList.contains('active')){
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
 });
 </script>
 <div class="overlay"></div>
