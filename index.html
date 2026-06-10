@@ -127,32 +127,11 @@ hamburger.addEventListener('click', () => {
 
 overlay.addEventListener('click', closeMenu);
 
-document.querySelectorAll('#navMenu a').forEach(link => {
+document.querySelectorAll('[data-target]').forEach(link => {
 
-    link.addEventListener('click', function(e) {
-
-        const target = this.dataset.target;
-
-        if (target) {
-
-            e.preventDefault();
-
-            closeMenu();
-
-            setTimeout(() => {
-                document.getElementById(target)
-                    .scrollIntoView({
-                        behavior: 'smooth'
-                    });
-            }, 300);
-
-        } else {
-
-            closeMenu();
-
-        }
-
-    });
+    link.onclick = function() {
+        alert(this.dataset.target);
+    };
 
 });
 
