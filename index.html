@@ -99,6 +99,26 @@
 function toggleMenu() {
     document.getElementById("navMenu").classList.toggle("active");
 }
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('nav');
+const overlay = document.querySelector('.overlay');
+
+hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', closeMenu);
+
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
+function closeMenu(){
+    nav.classList.remove('active');
+    overlay.classList.remove('active');
+}
 </script>
+<div class="overlay"></div>
 </body>
 </html>
