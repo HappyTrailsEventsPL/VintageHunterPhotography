@@ -126,7 +126,15 @@ hamburger.addEventListener('click', () => {
 overlay.addEventListener('click', closeMenu);
 
 document.querySelectorAll('#navMenu a').forEach(link => {
-    link.addEventListener('click', closeMenu);
+
+    link.addEventListener('click', function(e) {
+
+        alert('clicked: ' + this.textContent);
+
+        closeMenu();
+
+    });
+
 });
 
 document.addEventListener('click', (e) => {
