@@ -23,8 +23,8 @@
     <a href="street.html">Street</a>
     <a href="events.html">Events</a>
     <a href="travel.html">Travel</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#" data-target="about">About</a>
+    <a href="#" data-target="contact">Contact</a>
   </nav>
 </header>
 
@@ -129,9 +129,26 @@ document.querySelectorAll('#navMenu a').forEach(link => {
 
     link.addEventListener('click', function(e) {
 
-        alert('clicked: ' + this.textContent);
+        const target = this.dataset.target;
 
-        closeMenu();
+        if (target) {
+
+            e.preventDefault();
+
+            closeMenu();
+
+            setTimeout(() => {
+                document.getElementById(target)
+                    .scrollIntoView({
+                        behavior: 'smooth'
+                    });
+            }, 300);
+
+        } else {
+
+            closeMenu();
+
+        }
 
     });
 
