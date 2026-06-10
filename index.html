@@ -17,16 +17,14 @@
   <button class="hamburger">☰</button>
 
   <nav id="navMenu">
-    <a href="javascript:void(0)" data-target="about">About</a>
-    <button id="testBtn">TEST BUTTON</button>
     <a href="index.html">Home</a>
     <a href="portraits.html">Portraits</a>
     <a href="landscapes.html">Landscapes</a>
     <a href="street.html">Street</a>
     <a href="events.html">Events</a>
     <a href="travel.html">Travel</a>
-    <a href="#" data-target="about">About</a>
-    <a href="#" data-target="contact">Contact</a>
+    <button class="nav-link" data-target="about">About</button>
+    <button class="nav-link" data-target="contact">Contact</button>
   </nav>
 </header>
 
@@ -131,11 +129,22 @@ hamburger.addEventListener('click', () => {
 
 overlay.addEventListener('click', closeMenu);
 
-document.querySelectorAll('[data-target]').forEach(link => {
+document.querySelectorAll('.nav-link').forEach(btn => {
 
-    link.onclick = function() {
-        alert(this.dataset.target);
-    };
+    btn.addEventListener('click', function() {
+
+        const target = this.dataset.target;
+
+        closeMenu();
+
+        setTimeout(() => {
+            document.getElementById(target)
+                .scrollIntoView({
+                    behavior: 'smooth'
+                });
+        }, 300);
+
+    });
 
 });
 
