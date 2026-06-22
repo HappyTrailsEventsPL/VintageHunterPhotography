@@ -1,6 +1,6 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial,sans-serif;line-height:1.6}
-header{position:fixed;top:0;width:100%;background:#fff;padding:20px 5%;
+header{position:fixed;top:0;width:100%;background:#fff;padding:24px 5%;
 display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
 .logo{font-weight:bold;letter-spacing:2px}
 nav a{text-decoration:none;background: none;color:#222;margin-left:20px;padding:8px 12px;border-radius:6px;transition:.3s;}
